@@ -1,0 +1,47 @@
+XPATH
+
+Absolute xpath (not recommended) - /html/body/div[3]/div[2]/div/div/div[2]/div/div/div[1]/form/div[1]/div[7]/span/span[3]/input
+
+
+Relative xpath - 
+//tagname[@attribute='']
+//tagname[text()='']
+
+
+Grouping xpath - starts at 1
+(//input[@name='sex'])[3]
+
+Contains
+//tagname[contains(@attribute,'')]
+//tagname[contains(text(),'')]
+
+And-Or 
+
+//input[@type='file' and @data-test-id='file-upload-input']
+//input[@type='file' and @accept='.pdf']
+
+
+Example: validate in chrome - ctrl+f
+//input[@value='-1']
+//label[text()='Custom']
+
+//b[contains(text(),'phpMy')]
+
+//img[@alt='Go']
+
+//img[contains(@src,'go.gif')]
+//input[@type='file']
+
+
+CSS Selector 
+#id
+.classname
+tagname[attribute='']
+[attribute='']
+
+Example:
+#citiCard1
+input[name='citiCard2']
+[name='citiCard2']
+
+#bill-date-long
