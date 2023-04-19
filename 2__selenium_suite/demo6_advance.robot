@@ -37,7 +37,6 @@ TC4
     Set Selenium Implicit Wait    30s
     Set Selenium Speed    1s
     Go To    url=https://www.redbus.in/
-    
     Input Text    id=src    koyam
     Press Keys      None     ENTER
     Input Text    id=dest    madi
