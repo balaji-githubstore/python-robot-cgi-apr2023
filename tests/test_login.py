@@ -4,6 +4,8 @@ from assertpy import assert_that
 from selenium.webdriver.common.by import By
 from base.automation_wrapper import WebDriverListener
 
+"""Test Login contains all test methods of login functionality"""
+
 
 class TestLogin(WebDriverListener):
     def test_invalid_login(self):
