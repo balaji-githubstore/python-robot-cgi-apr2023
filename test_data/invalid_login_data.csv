@@ -1,0 +1,2 @@
+${tc_name};${username};${password};${expected_error}
+TC1;jio;joi123;Invalid credentials

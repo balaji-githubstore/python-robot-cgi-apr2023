@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.2 on win32)" generated="20230421 15:20:39.996" rpa="false" schemaversion="3">
+<suite id="s1" name="Csv Invalid Login Suite" source="C:\Mine\Company\CGI Apr 2023\robot_framework\tests\1__login_suite\4__csv_invalid_login_suite.robot">
+<test id="s1-t1" name="Invalid Login Test TC1" line="14">
+<kw name="Launch Browser And Navigate To Url" library="CommonFunctionalities" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230421 15:20:40.950" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230421 15:20:40.948" endtime="20230421 15:20:42.941"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230421 15:20:42.942" endtime="20230421 15:20:43.086"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230421 15:20:43.087" endtime="20230421 15:20:43.092"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>path=${EXECDIR}${/}screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20230421 15:20:43.093" endtime="20230421 15:20:43.098"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230421 15:20:43.100" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<status status="PASS" starttime="20230421 15:20:43.099" endtime="20230421 15:20:47.514"/>
+</kw>
+<status status="PASS" starttime="20230421 15:20:40.946" endtime="20230421 15:20:47.515"/>
+</kw>
+<kw name="Invalid Login Template">
+<arg>jio</arg>
+<arg>joi123</arg>
+<arg>Invalid credentials</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230421 15:20:47.521" level="INFO">Typing text 'jio' into text field 'name=username'.</msg>
+<status status="PASS" starttime="20230421 15:20:47.518" endtime="20230421 15:20:48.495"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230421 15:20:48.500" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg timestamp="20230421 15:20:48.641" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230421 15:20:48.848" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230421 15:20:48.496" endtime="20230421 15:20:48.849"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[contains(normalize-space(),'Login')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230421 15:20:48.852" level="INFO">Clicking element 'xpath=//button[contains(normalize-space(),'Login')]'.</msg>
+<status status="PASS" starttime="20230421 15:20:48.850" endtime="20230421 15:20:50.074"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath=//*[contains(normalize-space(),'Invalid')]</arg>
+<arg>${expected_error}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230421 15:20:50.649" level="INFO">Element 'xpath=//*[contains(normalize-space(),'Invalid')]' contains text 'Invalid credentials'.</msg>
+<status status="PASS" starttime="20230421 15:20:50.076" endtime="20230421 15:20:50.650"/>
+</kw>
+<status status="PASS" starttime="20230421 15:20:47.516" endtime="20230421 15:20:50.651"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230421 15:20:50.651" endtime="20230421 15:20:52.954"/>
+</kw>
+<status status="PASS" starttime="20230421 15:20:40.938" endtime="20230421 15:20:52.955"/>
+</test>
+<doc>This suite handles invalid login of orange HRM
+connected to story rdp-003</doc>
+<status status="PASS" starttime="20230421 15:20:40.005" endtime="20230421 15:20:52.959"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Csv Invalid Login Suite">Csv Invalid Login Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
