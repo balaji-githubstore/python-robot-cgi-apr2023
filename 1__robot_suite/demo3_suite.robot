@@ -1,8 +1,12 @@
 *** Settings ***
 Library     String
 Library    OperatingSystem
+Library     demo.py
 
 *** Test Cases ***
+TC11
+    ${res}  Add Number    4    6
+    Log To Console    ${res}
 TC1
     ${num1}     Set Variable     $162,700
     ${num2}     Set Variable     $161,700
